@@ -46,12 +46,19 @@
 /* Main content page offset */
 .content {
    margin-left: 200px;
-   padding: 1px 16px;
 }
 
 /* Handles letting the main text appear centralized */
 .central_text_offset {
    margin: 5% 20% 0 20%;
+}
+
+/* Adding the blakc baground to texts */
+.black_background {
+   background-color: var(--secondary_theme_color);
+   padding: 20px;
+   width:fit-content
+   
 }
 
 #AI_disclosure {
@@ -73,12 +80,14 @@
 }
 
 body {
-   background-image: url("/Images/Sith_theme_bg.png");
+   background-image: url("Images/Sith_theme_bg.png");
    background-attachment: fixed;
 }
 
 p {
    color: var(--text_color);
+   text-align: center;
+   padding-left: 10px;
 }
 
 footer {
@@ -87,8 +96,8 @@ footer {
    margin: 10px;
 }
 
-h1 {
-
+article {
+   margin: 0;
 }
 
 /* Screens smaller than 800px wide: sidebar turns into topbar */
