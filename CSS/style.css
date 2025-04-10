@@ -1,0 +1,157 @@
+/* All variables used throughout the webpage */
+:root {
+   --highlight_red_color: #da0000;
+   --text_color: #f0edee;
+   --secondary_theme_color: #181818;
+   --primary_theme_color: #404040;
+   --hover_color: #905555;
+   --reference_color: #b3b3b3;
+   --important_text: #770000;
+}
+
+/* Sidebar nav to the left menu */
+.sidebar {
+   margin: 0;
+   padding: 0;
+   width: 200px;
+   background-color: var(--secondary_theme_color);
+   opacity: 0.7;
+   position: fixed;
+   height: 100%;
+   overflow: auto;
+}
+
+/* Sidebar styling */
+.sidebar ul {
+   list-style: none;
+   padding-left: 0;
+   & a {
+      display: block;
+      color: var(--text_color);
+      padding: 16px;
+      text-decoration: none;
+   }
+}
+
+/* Active current sidebar link */
+.sidebar a.active {
+   background-color: var(--highlight_red_color);
+}
+
+/* Sidebar  mouse hovering over */
+.sidebar a:hover:not(.active) {
+   background-color: var(--hover_color);
+}
+
+/* Main content page offset */
+.content {
+   margin-left: 200px;
+   padding: 1px 16px;
+}
+
+/* Handles letting the main text appear centralized */
+.central_text_offset {
+   margin: 5% 20% 0 20%;
+}
+
+#AI_disclosure {
+   color: var(--highlight_red_color);
+   background: var(--secondary_theme_color);
+   border-radius: 10px;
+   display: inline-block;
+   padding: 10px;
+   text-decoration: underline;
+}
+
+#copyright_notice {
+   font-size: 1.4rem;
+}
+
+* {
+   font-family: "Poppins";
+   margin: 0;
+}
+
+body {
+   background-image: url("/Images/Sith_theme_bg.png");
+   background-attachment: fixed;
+}
+
+p {
+   color: var(--text_color);
+}
+
+footer {
+   text-align: center;
+   justify-content: space-around;
+   margin: 10px;
+}
+
+h1 {
+
+}
+
+/* Screens smaller than 800px wide: sidebar turns into topbar */
+@media screen and (max-width: 800px) {
+   .photo_property {
+      width: 90%;
+   }
+   .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      display: flex;
+      justify-content: center;
+   }
+
+   .sidebar ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+   }
+
+   .sidebar a {
+      text-align: center;
+      flex: 1 1 45%;
+      float: none;
+      box-sizing: border-box;
+   }
+
+   .content {
+      margin-left: 0;
+   }
+
+   #Contacter {
+      height: 55vh;
+   }
+
+   /* Offsets the footer to look more centered */
+   footer.content {
+      margin: 10px;
+      text-align: center;
+      justify-content: center;
+   }
+}
+
+@media screen and (max-width: 400px) {
+   .sidebar ul {
+      display: block;
+   }
+   .sidebar a {
+      text-align: center;
+      float: none;
+   }
+   .photo_property {
+      width: 100%;
+   }
+
+   /* Contactform becomes flushed with sides */
+   #Contacter form {
+      margin: 0;
+      max-width: 100%;
+      border-radius: 0;
+   }
+}
